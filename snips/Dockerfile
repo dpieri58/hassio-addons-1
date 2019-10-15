@@ -29,16 +29,16 @@ RUN apt-get update \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-        snips-platform-voice=0.63.2 \
-        snips-asr=0.63.2 \
-        snips-injection=0.63.2 \
-        snips-watch=0.63.2 \
+        snips-platform-voice=0.64.0 \
+        snips-asr=0.64.0 \
+        snips-injection=0.64.0 \
+        snips-watch=0.64.0 \
         mosquitto \
-        snips-audio-server=0.63.2 \
-        snips-dialogue=0.63.2 \
-        snips-hotword=0.63.2 \
-        snips-nlu=0.63.2 \
-        snips-tts=0.63.2 \
+        snips-audio-server=0.64.0 \
+        snips-dialogue=0.64.0 \
+        snips-hotword=0.64.0 \
+        snips-nlu=0.64.0 \
+        snips-tts=0.64.0 \
     && rm -rf /var/lib/apt/lists/* \
     && curl -L -o /assistant_Hass_de.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_de.zip \
     && curl -L -o /assistant_Hass_en.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_en.zip \

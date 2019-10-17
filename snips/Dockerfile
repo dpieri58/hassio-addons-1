@@ -38,7 +38,7 @@ RUN apt-get update \
         snips-dialogue \
         snips-hotword \
         snips-nlu \
-        snips-tts= \
+        snips-tts \
     && rm -rf /var/lib/apt/lists/* \
     && curl -L -o /assistant_Hass_de.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_de.zip \
     && curl -L -o /assistant_Hass_en.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_en.zip \

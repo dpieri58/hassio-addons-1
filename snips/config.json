@@ -1,8 +1,8 @@
 {
   "name": "Snips.AI",
-  "version": "5.3",
+  "version": "5.3.0",
   "slug": "snips",
-  "description": "Local voice control platform (PD)",
+  "description": "Local voice control platform",
   "url": "https://home-assistant.io/addons/snips/",
   "arch": ["armhf", "amd64"],
   "startup": "application",
@@ -27,5 +27,6 @@
       "active": "bool",
       "platform": "str"
     }
-  }
+  },
+  "image": "homeassistant/{arch}-addon-snips"
 }

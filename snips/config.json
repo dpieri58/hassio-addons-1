@@ -1,6 +1,6 @@
 {
   "name": "Snips.AI",
-  "version": "5.3.PD.0",
+  "version": "5.3",
   "slug": "snips",
   "description": "Local voice control platform (PD)",
   "url": "https://home-assistant.io/addons/snips/",

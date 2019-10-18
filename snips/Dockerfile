@@ -21,24 +21,24 @@ RUN apt-get update \
     && if [ "$BUILD_ARCH" = "amd64" ]; \
         then \
             bash -c 'echo "deb https://debian.snips.ai/stretch stable main" > /etc/apt/sources.list.d/snips.list' \
-            && apt-key adv --keyserver pgp.surfnet.nl --recv-keys F727C778CCB0A455; \
+            && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F727C778CCB0A455; \
         else \
             bash -c 'echo "deb https://raspbian.snips.ai/stretch stable main" > /etc/apt/sources.list.d/snips.list' \
-            && apt-key adv --keyserver pgp.surfnet.nl --recv-keys D4F50CDCA10A2849; \
+            && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys D4F50CDCA10A2849; \
         fi
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        snips-platform-voice=0.64.0 \
-        snips-asr=0.64.0 \
-        snips-injection=0.64.0 \
-        snips-watch=0.64.0 \
+    && apt-get install -y  \
+        snips-platform-voice  \
+        snips-asr \
+        snips-injection \
+        snips-watch \
         mosquitto \
-        snips-audio-server=0.64.0 \
-        snips-dialogue=0.64.0 \
-        snips-hotword=0.64.0 \
-        snips-nlu=0.64.0 \
-        snips-tts=0.64.0 \
+        snips-audio-server \
+        snips-dialogue \
+        snips-hotword \
+        snips-nlu \
+        snips-tts \
     && rm -rf /var/lib/apt/lists/* \
     && curl -L -o /assistant_Hass_de.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_de.zip \
     && curl -L -o /assistant_Hass_en.zip https://s3.amazonaws.com/hassio-addons-data/assistant_Hass_en.zip \
